@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="hi1">
+    <input type="text" id="hi2">
+    <select name="" id="p">
+        <option value="z">cong</option>
+        <option value="x">tru</option>
+        <option value="c">nhan</option>
+        <option value="v">chia</option>
+    </select>
+
+    <button id="bam">kq</button>
+    <script>
+        document.getElementById('bam').addEventListener('click',function () {          
+            var p = document.getElementById('p').value           
+            var a = document.getElementById('hi1').value
+            var b = document.getElementById('hi2').value
+            a = parseInt(a)
+            b = parseInt(b)
+            switch (p) {
+                case 'z':
+                    alert('kq la: ' + (a + b))
+                    break;
+                case 'x':
+                    alert('kq la: ' + (a - b));
+                    break;
+                case 'c':
+                    alert('kq la: ' + (a * b));
+                    break;
+                case 'v':
+                    alert('kq la: ' + (a / b));
+                    break;
+                default: alert('khong co kq');
+            }
+        })
+
+    </script>
+</body>
+
+</html>

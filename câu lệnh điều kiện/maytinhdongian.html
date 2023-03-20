@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Máy Tính Tay</h1>
+    <input type="text" name="" id="nhap">
+    <br> <br>
+        <button onclick="xu_ly(1)" id="1" value="1">1</button>
+        <button onclick="xu_ly(2)" id="2" value="2">2</button>
+        <button onclick="xu_ly(3)" id="3" value="3">3</button>
+
+        <br> <br>
+
+        <button onclick="xu_ly(4)" id="4" value="4">4</button>
+        <button onclick="xu_ly(5)" id="5" vale="5">5</button>
+        <button onclick="xu_ly(6)" id="6" value="6">6</button>
+
+        <br> <br>
+
+        <button onclick="xu_ly(7)" id="7" value="7">7</button>
+        <button onclick="xu_ly(8)" id="8" value="8">8</button>
+        <button onclick="xu_ly(9)" id="9" value="9">9</button></form>
+
+        <br> <br>
+
+        <button onclick="xoa()">c</button>
+        <button onclick="xu_ly(0)" id="0" value="0">0</button>
+        <button onclick="kq()">=</button>
+    <br>
+
+        <button onclick="xu_ly('+')">+</button>
+        <button onclick="xu_ly('-')">-</button>
+        <button onclick="xu_ly('*')" >x</button>
+        <button onclick="xu_ly('/')">/</button>
+    <script>
+            function xu_ly(numer){
+                var nhap = document.getElementById('nhap').value 
+                nhap += numer
+                document.getElementById('nhap').value = nhap }
+            function xoa(){
+                var nhap = document.getElementById('nhap').value   
+                document.getElementById('nhap').value = null
+            }    
+            function kq(){
+                var b = document.getElementById('nhap').value
+                q = eval(b)
+                document.getElementById('nhap').value = q
+            }
+    </script>
+</body>
+
+</html>

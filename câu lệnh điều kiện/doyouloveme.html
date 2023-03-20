@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+    <h1>Do you love me?</h1>
+    <button id="1">yes</button>
+   <button id="2">no</button>
+    <script>
+            document.getElementById('1').addEventListener('click', function(){
+                alert('you are right')
+            })
+            document.getElementById('2').addEventListener('mouseover' , function(){
+                var x = Math.round(Math.random() * window.innerWidth);
+                var y = Math.round(Math.random() * window.innerHeight);
+                document.getElementById('2').style.left = x + "px" ;
+                document.getElementById('2').style.top = y + "px" ;
+            })
+    </script></div> 
+</body>
+</html>
