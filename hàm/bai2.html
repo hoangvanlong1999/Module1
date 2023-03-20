@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chuyển Đổi Nhiệt Độ F sang Độ C</h1>
+    <input type="number" name="" id="so" value="">
+    <button id="chuyen" onclick="cd()">Chuyển</button>
+    <button onclick="xoa()">Xóa</button>
+    <script>
+             function cd(){
+                a = document.getElementById('so').value
+                a = parseInt(a)
+                b = (a-32)/1.8
+                // document.write('<br> <br>')
+                document.getElementById('so').value = b
+             }
+             function xoa(){
+                document.getElementById('so').value = null
+             }
+    </script>
+</body>
+</html>
