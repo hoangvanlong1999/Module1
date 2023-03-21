@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = prompt('nhap feet')
+        a = parseInt(a)
+        var b = prompt('nhap meters')
+        b = parseInt(b)
+        function fsm(c){
+            d = 0.305 * c
+            document.write(c + ' feet = ' + d + ' meter <br>')
+        }
+        function msf(c){
+            d = 3.279 * c
+            document.write(c + ' meter = ' + d + ' feet ')
+        }
+        fsm(a)
+        msf(b)
+    </script>
+</body>
+</html>
