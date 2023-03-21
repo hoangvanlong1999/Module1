@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--bai1 tinh binh phuong -->
+    <!-- <script>
+        var a = prompt('nhap so')
+        a = parseInt(a)
+        function bp(so){
+            so = so * so
+            document.write(so)
+        }
+        bp(a)
+    </script> -->
+
+    <!--bai2 tinh dien tich chu vi hinh tron -->
+    <!-- <script>
+        var r = prompt('nhap ban kinh')
+        r = parseInt(r)
+        function cv(c){
+            d = 2 * c * 3.14
+            document.write('chu vi hinh tron ' +d + '<br>')
+        }
+        function dt(c){
+            d = c * c * 3.14
+            document.write('dien tich hinh tron ' + d)
+        }
+        cv(r)
+        dt(r)
+    </script> -->
+
+
+    <!-- bai3 tinh giai thua 1 so -->
+    <!-- <script>
+        var a = prompt('nhap so')
+        a = parseInt(a)
+        function giaithua(b){
+            gt=1
+            if (b ==0){
+                alert('giai thua bang 0')
+            }else {
+                for (i=1;i<=b;i++){
+                    gt = gt *i
+                }
+                alert('giai thua = ' +  gt)
+            }
+        }
+        giaithua(a)
+    </script> -->
+
+
+    <!-- bai4 kiem tra so -->
+
+    <!-- <script>
+        var a = prompt('nhap so')
+        function g(b){
+        var d = Number.isFinite(b)
+        document.write(d)
+        }
+        g(a)
+    </script> -->
+
+
+    <!-- bai5  tìm số lớn nhất-->
+    <!-- <script>
+        var a = prompt('nhap so thu 1')
+        var b = prompt('nhap so thu 2')
+        var c = prompt('nhap so thu 3')
+        function ln(d,e,f){
+            max = d 
+            if (e>max){
+                max = e
+            }
+            if (f>max){
+                max = f
+            }
+            alert('gia tri lon nhat la :' + max)
+        }
+        ln(a,b,c)
+    </script> -->
+
+    <!-- bai6 kiem tra so nguyen duong so nguyen am -->
+    <!-- <script>
+        var a = prompt('nhap so')
+        a = parseInt(a)
+        function kt(b){
+            if (b==0){
+                alert(b + ' la so 0')
+            }else if( b>0){
+                    alert(b + ' la so nguyen duong')
+                    }else {
+                        alert(b + ' la so nguyen am')
+                    }
+        }
+        kt(a) -->
+
+    <!-- </script> -->
+
+    <!-- bai7 chuyen doi 2 so nguyen -->
+    <!-- <script>
+        a = prompt('nhap so thu1')
+        b = prompt('nhap so thu2')
+        function hd(c,d){
+            f = c
+            c = d
+            d = f
+            alert('st1 : '+ c + ' - '+ 'st2 :'+ d)
+        }
+        hd(a,b)
+    </script> -->
+
+    <!-- bai8 dao nguoc mang-->
+    <!-- <script>
+        var a = []
+        function nhap(b){
+            p = 11
+            for (i=1;i<=10;i++){
+                for(j=1;j<=1;j++){
+                    b[i]=p
+                    p=p+1
+                }
+            }
+        } 
+        nhap(a)
+        function dao(b){
+            b = b.reverse()
+        }
+        dao(a)
+        alert(a)
+
+    </script> -->
+
+    <!-- bai9  -->
+    <script>
+            var a = ['b','c','d','e','f','e','b']
+            function kt(z){
+                var s = prompt('nhap ky tu')
+                n=0
+                for (i=0;i<z.length;i++){
+                    if (z[i]==s){
+                        n++
+                    }
+                }
+                if (n==0){
+                    alert('-1')
+                }else alert('so lan xuat hien cua '+ s +' la ' + n)
+            }
+            kt(a)
+    </script>
+</body>
+
+</html>
