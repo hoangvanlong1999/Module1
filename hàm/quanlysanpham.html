@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nhap" value=""> <button id="add" onclick="them()">add</button>
+
+    <ul id="hienthi">
+
+    </ul>
+    <script>
+
+        var data = []
+        var editid = -1
+        function them() {
+
+            var d = document.getElementById('nhap').value;
+
+            if (editid == -1) { //lấy value nhập vào
+                data.push(d);
+            } else {
+                data[editid] = d;  //dùng để chỉnh sửa
+
+            }
+            document.getElementById('nhap').value = '' // sau khi nhập xong thì xóa chữ trong ô
+
+            display(); //hàm dùng để hiện thị
+
+        }
+
+        function display() {
+            var li = ''
+            for (i = 0; i < data.length; i++) {
+                li += '<li><strong>' + data[i] + '</strong><button onclick="edit(' + i + ')">edit</button><button onclick="xoa(' + i + ')">delete</button></li>';
+            }
+            document.getElementById('hienthi').innerHTML = li //innerHTNL truyền vào HTML
+        }
+
+        function edit(index) {
+            var item = data[index];
+            document.getElementById('nhap').value = item
+            editid = index;
+        }
+        function xoa(index) {
+            data.splice(index, 1);
+            display()
+        }
+
+
+    </script>
+</body>
+
+</html>
