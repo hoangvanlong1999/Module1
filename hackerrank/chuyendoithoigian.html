@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt('nhập giờ'))
+        var b = prompt('nhập phút')
+        var c = prompt('nhập buổi')
+        function kt(v,b,d){
+            switch (d) {
+                case 'pm':
+                        if (v<12){
+                            v = (v + 12)
+                            break;
+                        }
+                case 'am':
+                    if (v==12){
+                        v = 0
+                        break;
+                    }
+
+            }
+            document.write(v +' h '+ b +' '+ d )
+        }
+        kt(a,b,c)
+
+    </script>
+</body>
+</html>

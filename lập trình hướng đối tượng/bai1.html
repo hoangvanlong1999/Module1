@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mydate = function(ngay,thang,nam) {
+            this.ngay = ngay
+            this.thang = thang
+            this.nam = nam
+            this.getngay = function() {
+                return this.ngay
+            }
+            this.getthang = function() {
+                return this.thang
+            }
+            this.getnam = function() {
+                return this.nam
+            }
+
+            this.setngay = function(ngay) {
+                this.ngay = ngay
+            }
+            this.setthang = function(thang) {
+                this.thang = thang
+            }
+            this.setnam = function(nam) {
+                this.nam = nam
+            }
+        }
+    let a = new mydate(2,2,2007)
+    let ngay = a.getngay()
+    let thang = a.getthang()
+    let nam = a.getnam()
+    document.write(ngay + '/' + thang + '/' + nam)
+    document.write('<br>')
+    a.setngay(6)
+    a.setthang(6)
+    a.setnam(2006)
+    let ngay1 = a.getngay()
+    let thang1 = a.getthang()
+    let nam1 = a.getnam()
+    document.write(ngay1 + '/' + thang1 + '/' + nam1)
+    </script>
+</body>
+</html>

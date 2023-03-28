@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let hinhtron = function(bankinh){
+                this.bankinh = bankinh
+                this.getbankinh = function(){
+                    return bankinh
+                }
+                this.getdientich = function(){
+                    return Math.PI*bankinh*bankinh
+                }
+            }
+            let a = new hinhtron(2)
+            let bankinh = a.getbankinh()
+            let dientich = a.getdientich()
+            document.write(bankinh)
+            document.write('<br>')
+            document.write(dientich)
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt('nhập vị trí góc cây táo')
+        a = parseInt(a)
+        var b = prompt('nhập vị trí góc cây táo')
+        b = parseInt(b)
+        var s = prompt('nhập vị trí bắt đầu ngôi nhà')
+        s = parseInt(s)
+        var t = prompt('nhập ví trí kết thúc ngôi nhà')
+        t = parseInt(t)
+        var h = [2, 3, -4,4,5]
+        var l = [3, -2]
+        function ktt(c) {
+
+            var p = []
+            var k = []
+            for (var i = 0; i < c.length; i++) {
+                c[i] = (c[i] + a)
+
+            }
+            for (var j = 0; j < c.length; j++) {
+                if ((c[j] >= s)) {
+                    if (c[j] <= t) {
+                        k.push(c[j])
+                    }
+
+                }
+            }
+
+            document.write('có ' + k.length + ' quả táo rơi trong nhà ở các vị trí: ' + k.join(' '))
+        }
+
+        function ktc(c) {
+
+            var p = []
+            var k = []
+            for (var i = 0; i < c.length; i++) {
+                c[i] = (c[i] + b)
+
+            }
+            for (var j = 0; j < c.length; j++) {
+                if ((c[j] >= s)) {
+                    if (c[j] <= t) {
+                        k.push(c[j])
+                    }
+
+                }
+            }
+
+            document.write('có ' + k.length + ' quả cam rơi trong nhà ở các vị trí: ' + k.join(' '))
+        }
+        ktt(h)
+        document.write('<br> <br>')
+        ktc(l)
+    </script>
+</body>
+
+</html>

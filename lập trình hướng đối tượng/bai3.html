@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Den {
+            constructor(){
+                this.status = false
+            }
+            bat(){
+                this.status = true
+            }
+            tat(){
+                this.status = false
+            }
+        }
+
+        class CongTacDien {
+            constructor(){
+                this.status = false
+                this.lamp = null
+            }
+            ketNoiDen(doituongden){
+                this.lamp = doituongden
+            }
+            bat(){
+                this.lamp.bat()
+            }
+            tat(){
+                this.lamp.tat()
+            }
+        }
+
+        let den = new Den();
+        
+        let congtac = new CongTacDien();
+        congtac.ketNoiDen(den)
+
+        // congtac.bat();
+        congtac.tat();
+
+        console.log(den);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

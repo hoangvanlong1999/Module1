@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor() {
+                this.battery = 100;
+                this.isPowerOn = false;
+                this.inbox = [];
+                this.outbox = [];
+                this.draft = "";
+            }
+
+            checkBattery() {
+                console.log(`Battery level: ${this.battery}`);
+            }
+
+            turnOn() {
+                if (!this.isPowerOn) {
+                    this.isPowerOn = true;
+                    this.battery--;
+                    console.log("Mobile phone is turned on.");
+                } else {
+                    console.log("Mobile phone is already turned on.");
+                }
+            }
+
+            turnOff() {
+                if (this.isPowerOn) {
+                    this.isPowerOn = false;
+                    this.battery--;
+                    console.log("Mobile phone is turned off.");
+                } else {
+                    console.log("Mobile phone is already turned off.");
+                }
+            }
+
+            chargeBattery() {
+                if (this.battery < 100) {
+                    this.battery++;
+                    console.log("Charging battery...");
+                } else {
+                    console.log("Battery is fully charged.");
+                }
+            }
+
+            composeMessage(message) {
+                if (this.isPowerOn) {
+                    this.draft = message;
+                    this.battery--;
+                    console.log(`Draft saved: ${this.draft}`);
+                } else {
+                    console.log("Please turn on the mobile phone to compose a message.");
+                }
+            }
+
+            receiveMessage(message) {
+                if (this.isPowerOn) {
+                    this.inbox.push(message);
+                    this.battery--;
+                    console.log(`New message received: ${message}`);
+                } else {
+                    console.log("Please turn on the mobile phone to receive messages.");
+                }
+            }
+
+            sendMessage(mobile, message) {
+                if (this.isPowerOn) {
+                    mobile.receiveMessage(message);
+                    this.outbox.push(message);
+                    this.battery--;
+                    console.log(`Message sent to ${mobile.constructor.name}: ${message}`);
+                } else {
+                    console.log("Please turn on the mobile phone to send messages.");
+                }
+            }
+
+            viewInbox() {
+                if (this.isPowerOn) {
+                    console.log(`Inbox: ${this.inbox.join(", ")}`);
+                    this.battery--;
+                } else {
+                    console.log("Please turn on the mobile phone to view inbox.");
+                }
+            }
+
+            viewOutbox() {
+                if (this.isPowerOn) {
+                    console.log(`Outbox: ${this.outbox.join(", ")}`);
+                    this.battery--;
+                } else {
+                    console.log("Please turn on the mobile phone to view outbox.");
+                }
+            }
+        }
+
+        // Khởi tạo các đối tượng điện thoại
+        const nokia = new Mobile();
+        const iphone = new Mobile();
+
+        // Nokia soạn tin nhắn và gửi cho iPhone
+        nokia.composeMessage("Hello iPhone!");
+        nokia.sendMessage(iphone, nokia.draft);
+
+        // iPhone kiểm tra hộp thư đến và hiển thị tin nhắn
+        iphone.viewInbox();
+    </script>
+</body>
+
+</html>
