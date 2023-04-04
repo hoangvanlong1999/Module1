@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên Với JaVascript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="form-student">
+        <h3>Thông Tin Sinh Viên</h3>
+        <label for="">Họ Và Tên</label>
+        <input type="text" name="" id="fullname">
+        <span id="loi" class="loi1"></span>
+        <br> <br>
+
+        <label for="">Email</label>
+        <input type="text" name="" id="email">
+        <span id="loi2" class="loi1"></span>
+        <br> <br>
+
+        
+        <label for="">Số Điện Thoại</label>
+        <input type="text" name="" id="phone">
+        <span id="loi3" class="loi1"></span>
+
+        <br> <br>
+
+        <label for="">Địa CHỉ</label>
+        <input type="text" name="" id="adress">
+        <span id="loi4" class="loi1"></span>
+
+        <br> <br>
+
+        <label for="">Giới TÍnh</label>
+        <input type="radio" name="gt" id="gt1" value="nam"> Nam
+        <input type="radio" name="gt" id="gt2" value="nu"> Nu
+        <span id="loi5" class="loi1"></span>
+
+        <br> <br>
+
+        <label for="">&nbsp;</label>
+        <button id="nutbam" onclick="save()" >lưu lại</button>
+        <button id="capnhat"  >cập nhật</button>
+    </div>
+    <br>
+    <div class="list-student">
+        <h3>Danh Sách Siên Viên</h3>
+        <table id="bang1" width="800" border="1" cellpadding="0">          
+        </table>
+    </div>
+    <script src="./hocsinh.js"></script> 
+</body>
+
+</html>

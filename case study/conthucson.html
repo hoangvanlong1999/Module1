@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công THức Pha Sơn Kim Loại</title>
+    <style>
+        .h1{
+            color: red;
+            text-align:center ;
+            background-color: aqua;
+        }
+        .item {
+            background-color: blanchedalmond;
+            width: 500px;
+            border: 1px solid #ccc;
+            margin: 25px;
+            padding: 10px;
+            float: left;
+         }
+        .label {
+            width: 100px;
+            float: left;
+        }
+        .body{
+            background-color: chartreuse;
+        }
+        .nut {
+            margin-top: 15px;
+            margin-left: 100px;
+        }
+        .banghuongdan {
+            background-color: bisque;
+            width: 900px;
+            border: 1px solid #ccc;
+            margin: 25px;
+            padding: 10px;
+            float: left;
+
+         }
+         h3 {
+            text-align:center ;
+         }
+    </style>
+</head>
+<body class="body">
+    <h1 class="h1">Công Thức Pha Chế Sơn Kim Loại Hãng Sơn Hoàng Long</h1>
+    <div class="item">
+        <label class="label" for="chontang">Chọn Tầng Sơn</label>
+        <select name="chontang" id="chontang1">
+            <option value="sonlot">Sơn Lót</option>
+            <option value="sonlamdep">Sơn làm Đẹp</option> 
+
+        </select> <br><br>
+
+        <label class="label" for="chonmau">Chọn màu Sơn</label>
+        <select name="chonmau" id="chonmau2">
+            <option value="vang">Màu Vàng</option>
+            <option value="do">Màu đỏ</option> 
+            <option value="nau">Màu Nâu</option>
+            <option value="xanhla">Màu xanh lá cây</option>
+            <option value="xanhduong">Màu Xanh dương</option>
+        </select> <br><br>
+
+        <label class="label" for="kg">Khập số lượng sơn (kg) </label>
+        <input type="text" name="kg" id="nhap">
+        <br><br>
+        <button class="nut" id="kiemtra">Kiểm Tra</button><br><br>
+        <img src="https://japan.net.vn/images/uploads/2019/09/13/don-hang-son-kim-loai-di-nhat.jpg" width="100%" height="50%" alt="">
+    </div>
+
+    <div class="banghuongdan">
+        <h3>Bảng Hướng Dẫn</h3>
+        <ul id="banghienthi">
+            <li><img width="850" height="" src="https://dcar.com.vn/vnt_upload/partner/thumbs/(770x530)_crop__Xe_Hoang_Long.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script src="./quanlison.js"></script>
+</body>
+</html>

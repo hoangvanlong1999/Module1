@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 750px;
+            height: 750px;
+            text-align: center;
+        }
+
+        .den {
+            background-color: black;
+        }
+        .item22{
+            float: left  200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item22">
+        <table border="1" id="bang" class="item">
+
+        </table>
+    </div>
+    <script>
+        var a = []
+        for (i = 0; i < 8; i++) {
+            a[i] = []
+            for (j = 0; j < 8; j++) {
+                a[i][j] = ' ';
+            }
+        }
+
+        function duyet(c) {
+            var b = ''
+            for (i = 0; i < 8; i++) {
+                b += '<tr>'
+                for (j = 0; j < 8; j++) {
+                    if (i % 2 == 0 && j % 2 != 0) {
+                        b += '<td class="den">' + c[i][j] + '</td>'
+                    } else if (i % 2 != 0 && j % 2 == 0) {
+                        b += '<td class="den">' + c[i][j] + '</td>'
+                    }
+                    else {
+                        b += '<td>' + c[i][j] + '</td>'
+                    }
+                }
+                b += '</tr>'
+
+            } return b
+
+
+        }
+        document.getElementById('bang').innerHTML = duyet(a)
+    </script>
+</body>
+
+</html>
